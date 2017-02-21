@@ -60,3 +60,9 @@ typings/
 # angular components
 *.js
 *.js.map
+
+# output directory
+dest/
+
+# misc
+.DS_Store
