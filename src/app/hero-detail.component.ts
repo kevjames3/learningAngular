@@ -9,7 +9,8 @@ import { HeroService } from './hero.service';
 @Component({
   moduleId: module.id,
   selector: 'my-hero-detail',
-  templateUrl: 'views/hero-detail.component.html'
+  templateUrl: 'views/hero-detail.component.html',
+  styleUrls: ["./styles/hero-detail.component.css"]
 })
 
 export class HeroDetailComponent implements OnInit {
@@ -24,8 +25,10 @@ export class HeroDetailComponent implements OnInit {
     
     ngOnInit(): void {
       this.route.params
-        .switchMap((params: Params) => this.heroService.getHero( + params['id']))
-        .subscribe(hero => this.hero = hero);
+        .switchMap((params: Params) => this.heroService.getHero(+params['id']))
+        .subscribe(hero => {
+          this.hero = hero
+        });
     }
 
     goBack(): void {

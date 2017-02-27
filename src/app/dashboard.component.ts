@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   moduleId: module.id,
   selector: 'my-dashboard',
   templateUrl: 'views/dashboard.component.html',
+  styleUrls: ["./styles/dashboard.component.css"]
 })
 export class DashboardComponent implements OnInit {
 
